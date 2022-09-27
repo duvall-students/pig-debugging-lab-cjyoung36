@@ -9,8 +9,10 @@ public class Game {
 	private final int LOSER_ROLL = 1;
 	
 	public Game(){
-		Player player1 = new GUIPlayer();
-		Player player2 = new ComputerPlayer();
+//		Player player1 = new GUIPlayer();
+//		Player player2 = new ComputerPlayer();
+		player1 = new GUIPlayer();							// Changed constructor to initialize field
+		player2 = new ComputerPlayer();						// instead of new local instance variables
 		die = new Random();
 		spinner = new Spinner();
 	}
