@@ -25,8 +25,8 @@ public class Spinner {
 		double low = 0;
 		boolean done = false;
 		String result = "";
-		while(!done){
-			double high = probabilities[index] + low;
+		while(!done && index < probabilities.length){			// Added index upper bound check to
+			double high = probabilities[index] + low;			// get rid of IndexOfBounds error
 			if(spinNumber>= low && spinNumber< high){
 				result = sections[index];
 				done = true;
