@@ -21,13 +21,13 @@ public class Spinner {
 	 * based on the given probabilities.
 	 */
 	public String numToWord(double spinNumber){	
-		int index = 0;		// Added index upper bound check to get rid of IndexOfBounds error
-		double low = 0;											
+		int index = 0;				// Added index upper bound check to get rid of IndexOfBounds error
+		double low = 0;				
 		boolean done = false;
 		String result = "";
 		while(!done){		
 			double high = probabilities[index] + low;	
-			if(spinNumber>= low && spinNumber< high){
+			if(spinNumber >= low && spinNumber< high){
 				result += sections[index];
 				done = true;
 			}
