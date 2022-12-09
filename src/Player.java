@@ -6,6 +6,7 @@ public abstract class Player {
 	private final int WIN_SCORE = 100;
 	
 	public Player(String myName){
+		this.myName = myName;			// fixed bug where name display was null for computer
 		myScore = 0;
 	}
 	
